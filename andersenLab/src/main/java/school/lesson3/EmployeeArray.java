@@ -16,10 +16,15 @@ public class EmployeeArray {
         persArray[4] = new Employee("Сарутоби Хирудзен Петрович", "хокагэ",
                 "hirudzen@gmail.com", "375259948678", 5000, 60);
 
-        for(int i = 100; i<100&&i>40; i--){
-            if (persArray[i]>40) {
-                System.out.println(persArray[i].toString());
+        //System.out.println(persArray[4].getAge()); - вывести возраст из элемента массива
+
+
+        for (int i = 0; i < persArray.length; i++) {
+            if (persArray[i].getAge()>40) {
+                persArray[i].info();
+                //System.out.println(persArray[i]); - вывести объект из массива
             }
         }
+
     }
 }

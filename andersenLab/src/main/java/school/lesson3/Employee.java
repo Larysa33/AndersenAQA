@@ -66,7 +66,14 @@ public class Employee {
         this.age = age;
     }
 
-    @Override
+    public void info (){
+        System.out.println("Сотрудник:" + "ФИО= " + name +
+                ", должность=" + position + ", email='" + email +
+                ", телефон='" + phone + ", зарплата=" + salary +
+                ", возраст=" + age);
+    }
+
+    /*@Override
     public String toString() {
         return "Сотрудник{" +
                 "ФИО='" + name + '\'' +
@@ -77,5 +84,6 @@ public class Employee {
                 ", возраст=" + age +
                 '}';
     }
+     */
 }
 

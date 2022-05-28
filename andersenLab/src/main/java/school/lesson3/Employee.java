@@ -67,9 +67,8 @@ public class Employee {
     }
 
     public void info (){
-        System.out.println("Сотрудник:" + "ФИО= " + name +
-                ", должность=" + position + ", email='" + email +
-                ", телефон='" + phone + ", зарплата=" + salary +
+        System.out.println("Сотрудник:" + " ФИО=" + name + ", должность=" + position +
+                ", email=" + email + ", телефон=" + phone + ", зарплата=" + salary +
                 ", возраст=" + age);
     }
 

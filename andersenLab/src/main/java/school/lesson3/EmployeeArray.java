@@ -16,8 +16,8 @@ public class EmployeeArray {
         persArray[4] = new Employee("Сарутоби Хирудзен Петрович", "хокагэ",
                 "hirudzen@gmail.com", "375259948678", 5000, 60);
 
+        //persArray[4].setPhone("70"); - изменить значение переменной типа private
         //System.out.println(persArray[4].getAge()); - вывести возраст из элемента массива
-
 
         for (int i = 0; i < persArray.length; i++) {
             if (persArray[i].getAge()>40) {

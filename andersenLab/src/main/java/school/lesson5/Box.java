@@ -14,13 +14,16 @@ public class Box <T> {
 
     ArrayList <Fruit> list;
 
-    public Box(String name, ArrayList <Fruit> list){
+    public Box(String name){
         this.name = name;
-        this.list = list;
+        this.list = new ArrayList<>();
     }
 
     public float getWeight(Fruit f) {
         boxWeight = list.size() * f.getWeight();
+        System.out.println(name);
+        System.out.println("Вес коробки = " + boxWeight);
+        System.out.println();
         return boxWeight;
     }
 
@@ -35,16 +38,19 @@ public class Box <T> {
     public float addFruit(Fruit f) {
             list.add(f);
             boxWeight = boxWeight + f.getWeight();
+        System.out.println("После добавления фрукта вес коробки = " + boxWeight);
+        System.out.println();
             return boxWeight;
     }
 
-    /* Наброски метода по пересыпанию фруктов из одной коробки в другую
-    public void changeBoxes(Box b){
-        a.ArrayList <> list = new ArrayList<>();
-        b.ArrayList <> list2 = new ArrayList<>();
-        ((ArrayList<?>) list2).addAll(list);
-        ((ArrayList<?>) list).removeAll(list);
-        System.out.println(b.boxWeight);
+    //Метод changeBoxes был исправлен с куратором
+    public void changeBoxes(Box <T> sender){
+        this.list.addAll(sender.list);
+        this.boxWeight += sender.boxWeight;
+        sender.list.clear();
+        sender.boxWeight = 0;
+        System.out.println("После пересыпания фруктов вес текущей коробки = " + this.boxWeight);
+        System.out.println("Вторая коробка стала пустой, её вес теперь = " + sender.boxWeight);
+        System.out.println();
     }
-    */
 }
